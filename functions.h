@@ -15,7 +15,7 @@ int login()
     scanf("%s", username_input);
     printf("Password: ");
     scanf("%s", password_imput);
-    if (username_input == reception_staff1 && password_imput == reception_pass1)
+    if ( reception_staff1 == username_input && reception_pass1 == password_imput)
     {
         return 1;
     }
@@ -30,3 +30,5 @@ int login()
 }
 
 /* ------------------------------------------------------------------------------------- */
+
+int 

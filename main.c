@@ -11,7 +11,7 @@ int main()
     printf("Welcome to Hospital Management System \n \n");
     printf("*********************************************************\n\n");
     printf("Log In to access the system. \n\n");
-    account = login();
+    account = login();  /* segmentation error */
     printf(account);
     return 0;
 }
