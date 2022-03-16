@@ -1,7 +1,8 @@
 char reception_staff1[] = "reception1", reception_pass1[] = "password"; // sample username and password for reception staff
 char doctor1[] = "doctor1", doctor_pass1[] = "password";                // sample username and password for doctor
 char ipd_staff1[] = "ipd1", ipd_pass1[] = "password";                   // sample username and password for ipd staff
-char username_input[20], password_imput[20];                            // username and password input by the user
+int user_type;
+char password_imput[20];                            // username and password input by the user
 /*--------------------------------------------------------------------------------------*/
 
 struct new_patient
@@ -27,14 +28,16 @@ be accessible to the given user   */
 
 int login()
 {
-    printf("Username: ");
-    scanf("%s", username_input);
+    printf("Login as \n");
+    printf("1. Doctor \n2. Reception\n3. IPD \nEnter the Sr. No for the login type:");
+    scanf("%d", &user_type);
     printf("Password: ");
     scanf("%s", password_imput);
-    switch (username_input)
+    switch (user_type)
     {
-    case doctor1:
+    case 1:
         printf("hello world");
+        return 1;
         break;
     
     default:
